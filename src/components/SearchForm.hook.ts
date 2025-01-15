@@ -1,18 +1,16 @@
-import React, { useEffect } from "react";
 import { pokemonDetailServices, pokemonListServices } from "../services";
 import { useForm } from "react-hook-form";
 import { usePokemonListStore } from "../store/pokemonList";
 import { generationList } from "../utils/optionLists";
 import { IPokemonDetailResponse } from "../interface/pokemonDetails";
+import { useEffect } from "react";
 
 
 
 const useSearchForm = () => {
     const {
         register,
-        handleSubmit,
         watch,
-        formState: { errors },
     } = useForm()
     const { setFetchPokemonList, fetchPokemon, setPokemonList } = usePokemonListStore()
     const keyword = watch('keyword')

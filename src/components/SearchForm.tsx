@@ -5,7 +5,7 @@ import { useSearchForm } from "./SearchForm.hook";
 const SearchForm = () => {
     const {fieldKeyword,fieldGeneration, fieldSort, fieldType } = useSearchForm()
     return (
-        <form className="grid grid-cols-1 lg:grid-cols-4 md-grid-cols-2 gap-[20px]">
+        <form className="grid grid-cols-1 lg-grid-cols-4 md-grid-cols-2 gap-[20px]">
             <div>
                
                     <label 
@@ -36,7 +36,7 @@ const SearchForm = () => {
                     id="type" 
                     className="bg-[#253641] capitalize border border-gray-300 text-white text-sm rounded-lg focus:ring-[#375EAA] focus:border-[#375EAA] block w-full p-2.5">
                       {typesList.map((item, index) => {
-                        return  <option className="capitalize" key={`type-key-${index}`} value={index}>{item}</option>
+                        return  <option className="capitalize" key={`type-key-${index}`} value={item}>{item}</option>
                       })}
                     </select>
                 

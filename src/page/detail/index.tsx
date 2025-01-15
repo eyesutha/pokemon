@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react"
-import { useParams, Route, Routes, Link } from "react-router-dom"
-import { pokemonDetailServices, pokemonListServices } from "../../services"
+import { useParams, Link } from "react-router-dom"
+import { pokemonDetailServices } from "../../services"
 import { IPokemonDetailResponse } from "../../interface/pokemonDetails"
-import PokemonCard from "../../components/PokemonCard"
+import { useEffect, useState } from "react"
 
 type pokemonType = {
     data: IPokemonDetailResponse | undefined,
@@ -76,10 +75,10 @@ const Detailpage = () => {
                         </div>
                         <div className="pt-5 bg-[#253641] rounded-[20px] p-[16px] my-[20px]">
                             <div className="flex justify-between">
-                                <h5 className="mb-2 capitalize text-xl font-bold tracking-tight text-gray-900 text-white">
+                                <h5 className="mb-2 capitalize text-xl font-bold tracking-tight  text-white">
                                     {pokemon.data.name}
                                 </h5>
-                                <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 text-white">
+                                <h5 className="mb-2 text-xl font-bold tracking-tight  text-white">
                                     #{pokemon.data.id}
                                 </h5>
                             </div>
