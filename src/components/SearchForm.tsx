@@ -1,4 +1,3 @@
-import React from "react";
 import { generationList, typesList, sortList } from "../utils/optionLists";
 import { useSearchForm } from "./SearchForm.hook"; 
 
